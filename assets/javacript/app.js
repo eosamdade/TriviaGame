@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    
+
     $("#remaining-time").hide();
     $("#start").on('click', trivia.startGame);
     $(document).on('click' , '.option', trivia.guessChecker);
@@ -17,7 +17,7 @@ var game = {
 };
 
 var questions = {
-    q1: "question 1",
+    q1:"question 1",
     q2:"question 2",
     q3:"question 3",
     q4:"question 4",

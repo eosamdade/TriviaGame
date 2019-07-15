@@ -6,14 +6,33 @@
     <title>TriviaManiac</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'> -->
-    <script src='./assets/javacript/app.js'></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    
+ 
 </head>
 <body>
+
+    <h1 class="title">TRIVIA GAME</h1>
+
+    <div class="wrapper">
+
+        <div id="game">
+            <p id="remaining-time" class="time">
+                <span id="timer"></span>
+            </p>
+            <p id="question"></p>
+        </div>
+        <div id="results"></div>
+    </div>
+
+    <div>
+        <div id="choices" class="text center">
+            <button id="start" class="option-buttons">Start Game</button> 
+        </div>
+    </div>
     
 
 
-    
+    <script src='./assets/javacript/app.js'></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 </body>
 </html>
