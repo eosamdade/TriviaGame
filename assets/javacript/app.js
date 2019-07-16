@@ -1,10 +1,16 @@
-$(document).ready(function(){
-
+$( document ).ready(function() {
     $("#remaining-time").hide();
-    $("#start").on('click', trivia.startGame);
-    $(document).on('click' , '.option', trivia.guessChecker);
+    $("#start").on('click',startGame);
+    $(document).on('click' , '.option',guessChecker);;
+});
+
+// $(document).ready(function(){
+
+//     $("#remaining-time").hide();
+//     $("#start").on('click', trivia.startGame);
+//     $(document).on('click' , '.option', trivia.guessChecker);
     
-})
+// })
 
 var game = {
     correct: 0,
@@ -23,21 +29,21 @@ var questions = {
     q4:"question 4",
 },
 
-var options = {
-    q1:["A","B","C","D"],
-    q2:["A","B","C","D"],
-    q3:["A","B","C","D"],
-    q4:["A","B","C","D"]
-},
+// var options = {
+//     q1:["A","B","C","D"],
+//     q2:["A","B","C","D"],
+//     q3:["A","B","C","D"],
+//     q4:["A","B","C","D"],
+// };
 
-var answer = {
-    q1:["A"],
-    q2:["A"],
-    q3:["A"],
-    q4:["A"]
-};
+// var answer = {
+//     q1:["A"],
+//     q2:["A"],
+//     q3:["A"],
+//     q4:["A"]
+// };
 
-function StartGame () {
+function startGame () {
 
     game.correct =  0,
     game.incorrect =  0,
@@ -50,7 +56,7 @@ function StartGame () {
     $("#timer").text(game.timer);
     $("#start").hide();
     $("rem-time").show();
-    game.nextQuestion();
+    nextQuestion();
 
 };
 
@@ -60,7 +66,7 @@ function nextQuestion (){
     $("#timer").removeClass("last-sec");
     $("#timer").text(game.timer);
 
-    if (!trivia.timerOn) {
+    if (!game.timerOn) {
         game.timerId = setInterval(game.timer,1000);
     }
 
